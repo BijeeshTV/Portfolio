@@ -7,52 +7,59 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section id="home">
-      <h1>Welcome to My Portfolio</h1>
-      <p>Hello! I’m Dr. Bijeesh TV, Associate Professor in the Dept. of AIML & DS.</p>
-    </section>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>[A brief introduction about yourself.]</p>
-    </section>
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Project 1:</strong> Short project description.</li>
-        <li><strong>Project 2:</strong> Short project description.</li>
-      </ul>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <form id="contact-form">
-        <label>Name:<br />
-          <input type="text" name="name" required />
-        </label><br />
-        <label>Email:<br />
-          <input type="email" name="email" required />
-        </label><br />
-        <label>Message:<br />
-          <textarea name="message" required></textarea>
-        </label><br />
-        <button type="submit">Send</button>
-      </form>
-      <div id="form-message"></div>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 [Your Name]</p>
-  </footer>
+  <div class="container">
+    <aside class="profile-photo">
+      <img src="Profile_photo.jpg" alt="Your Name" />
+    </aside>
+    <div class="content">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section id="home">
+          <h1>Welcome to My Portfolio</h1>
+          <p>Hello! I’m [Your Name], a [Your Profession].</p>
+        </section>
+        <section id="about">
+          <h2>About Me</h2>
+          <p>[A brief introduction about yourself.]</p>
+        </section>
+        <section id="projects">
+          <h2>Projects</h2>
+          <ul>
+            <li><strong>Project 1:</strong> Short project description.</li>
+            <li><strong>Project 2:</strong> Short project description.</li>
+          </ul>
+        </section>
+        <section id="contact">
+          <h2>Contact</h2>
+          <form id="contact-form">
+            <label>Name:<br />
+              <input type="text" name="name" required />
+            </label><br />
+            <label>Email:<br />
+              <input type="email" name="email" required />
+            </label><br />
+            <label>Message:<br />
+              <textarea name="message" required></textarea>
+            </label><br />
+            <button type="submit">Send</button>
+          </form>
+          <div id="form-message"></div>
+        </section>
+      </main>
+      <footer>
+        <p>&copy; 2025 [Your Name]</p>
+      </footer>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
