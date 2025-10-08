@@ -6,6 +6,15 @@ body {
   color: #222;
 }
 
+a {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .container {
   display: flex;
   min-height: 100vh;
@@ -15,10 +24,12 @@ body {
   flex: 0 0 250px;
   background: #eee;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 2rem 1rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 1rem 1rem 1rem;
   box-sizing: border-box;
+  border-right: 1px solid #ccc;
 }
 
 .profile-photo img {
@@ -27,12 +38,20 @@ body {
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   object-fit: cover;
+  margin-bottom: 1.5rem;
+}
+
+.contact-block {
+  font-size: 0.95em;
+  text-align: center;
+  margin-top: 1em;
 }
 
 .content {
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 header {
@@ -41,11 +60,27 @@ header {
   padding: 1rem 0;
 }
 
+header h1 {
+  margin: 0 0 0.2em 0;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+header h2 {
+  margin: 0 0 0.8em 0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
 nav ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.2rem;
   margin: 0;
   padding: 0;
 }
@@ -53,17 +88,39 @@ nav ul {
 nav a {
   color: #fff;
   text-decoration: none;
+  font-size: 1em;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #ffd700;
 }
 
 main {
   padding: 2rem;
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
   width: 100%;
 }
 
 section {
   margin-bottom: 2.5rem;
+}
+
+.history .job {
+  margin-bottom: 1.6rem;
+}
+
+.history ul {
+  margin: 0.2em 0 0 1.5em;
+}
+
+.skills-list {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  gap: 1.5rem;
+  max-width: 700px;
 }
 
 footer {
@@ -74,6 +131,7 @@ footer {
   margin-top: auto;
 }
 
+/* Contact Form */
 form input, form textarea {
   width: 100%;
   padding: 0.5rem;
@@ -81,6 +139,8 @@ form input, form textarea {
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 1em;
+  font-family: inherit;
 }
 
 form button {
@@ -90,21 +150,35 @@ form button {
   padding: 0.7rem 1.2rem;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 1em;
+}
+
+#form-message {
+  margin-top: 1em;
+  color: green;
+  font-weight: bold;
+  min-height: 1.2em;
 }
 
 /* Responsive for small screens */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .container {
     flex-direction: column;
   }
   .profile-photo {
     flex: none;
     width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 0;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    padding: 1.2rem 0 1.2rem 0;
   }
   .content {
     width: 100%;
+  }
+  .skills-list {
+    columns: 1;
+  }
+  main {
+    padding: 1rem;
   }
 }
