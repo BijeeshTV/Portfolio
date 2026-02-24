@@ -15,7 +15,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     from_name: name,
     from_email: email,
     message: message,
-    to_email: 'bijeesh.tv@christuniversity.in'
+    to_email: 'bijeeshtv@gmail.com'
   };
 
   emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
